@@ -19,7 +19,7 @@ The pretrained model, **BRAIDBERTa-v9**, lives on the Hub:
 
 ```bash
 pip install rdkit
-pip install git+https://github.com/aakothari/braids.git
+pip install git+https://github.com/AayushK-othari/braid.git
 ```
 
 ## Quickstart
