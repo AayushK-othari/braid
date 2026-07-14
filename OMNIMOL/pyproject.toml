@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "braids-mol"
+version = "0.1.0"
+description = "BRAID: a reference SMILES<->BRAID molecular line-notation codec"
+requires-python = ">=3.9"
+dependencies = ["rdkit>=2022.9"]
+
+[project.scripts]
+braids = "braids.__main__:main"
+
+[tool.setuptools]
+packages = ["braids"]
