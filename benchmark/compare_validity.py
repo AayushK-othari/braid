@@ -20,8 +20,8 @@ from rdkit import Chem
 from rdkit import RDLogger
 RDLogger.DisableLog("rdApp.*")
 
-from OMNIMOL import smiles_to_braid, braid_to_smiles
-from OMNIMOL.tokenizer import tokenize as braid_tokenize
+from braids import smiles_to_braid, braid_to_smiles
+from braids.tokenizer import tokenize as braid_tokenize
 
 try:
     import selfies as sf

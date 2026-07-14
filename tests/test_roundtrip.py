@@ -2,7 +2,7 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from rdkit import Chem
-from OMNIMOL import smiles_to_braid, braid_to_smiles
+from braids import smiles_to_braid, braid_to_smiles
 
 CASES = {
     "methane": "C",

@@ -6,8 +6,8 @@ point-mutations of real strings.
 import sys, os, random
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from rdkit import Chem
-from OMNIMOL import smiles_to_braid, braid_to_mol
-from OMNIMOL.codec import _tokenize
+from braids import smiles_to_braid, braid_to_mol
+from braids.codec import _tokenize
 
 ATOM_TOKS = ["C", "N", "O", "S", "P", "F", "Cl", "Br",
              "[N+]", "[O-]", "[NH4+]", "[nH]", "[2H]"]
