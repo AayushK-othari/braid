@@ -1,4 +1,4 @@
-# BRAID
+# BRAID(s)
 
 **B**ranch-counted, **R**elative-ring, **A**ttachment-native, **I**nvalid-free, **D**ense —
 a machine-native molecular line notation in which every string decodes to a valid molecule.
