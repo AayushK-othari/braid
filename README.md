@@ -4,13 +4,9 @@
 a machine-native molecular line notation in which every string decodes to a valid molecule.
 
 This repository is a **working reference implementation** plus the test suites used to
-verify (and, in several places, *falsify*) the claims made about it.
+verify the claims made about it.
 
-> **Status: research prototype.** It leans on RDKit for SMILES parsing and sanitization; it
-> is not a standalone spec, and it is not production-grade. BRAID is a *recombination* of
-> published mechanisms.
-
-The pretrained model, **BRAIDBERTa-v9**, lives on the Hub:
+The pretrained model, **BRAIDBERTa-v9**, lives on the HuggingFace:
 [aakothari/BRAIDBERTa-v9](https://huggingface.co/aakothari/BRAIDBERTa-v9).
 
 ---
@@ -70,13 +66,11 @@ Whichever you train on, you must also infer with — the strings are not interch
 - Guaranteed-valid decoding via a valence state machine — the entire point of SELFIES.
 - Fragment separator for scaffold-first generation — SAFE (Noutahi et al., 2023).
 
-Every individual mechanism is published. The *combination* converged with an independently
-sketched proposal ("OMNIMOL") on all four ideas, which is evidence that the design space has
-an attractor there — **not** evidence of novelty.
+Every individual mechanism is published. This particular combination is where the novelty lies.
 
 ---
 
-## What is verified
+## Verified
 
 Reproduce with `python -m pytest tests/`:
 
@@ -157,7 +151,6 @@ not the Markov proxy.
 
 ```
 braids/
-  braids/
     __init__.py      public API
     codec.py         encoder + decoder + valence state machine + stereo
     tokenizer.py     token stream + Vocab for CLM training
@@ -169,12 +162,9 @@ braids/
   benchmark/
     compare_validity.py Markov-based representation comparison (no GPU)
     train_clm.py        nanoGPT-style CLM harness (needs torch + .smi data)
-  braid_tok/         trained BPE tokenizer for BRAIDBERTa
+  braid_tok/         trained WordPiece tokenizer for BRAIDBERTa
   pyproject.toml
 ```
-
-Model weights are **not** in this repo — they are on the Hub at
-[aakothari/BRAIDBERTa-v9](https://huggingface.co/aakothari/BRAIDBERTa-v9).
 
 ## References
 
