@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+
+# training artifacts — weights live on the HF Hub
+runs/
+checkpoint-*/
+*.safetensors
+*.bin
+*.pt
+
+# corpora
+100k_rndm_zinc_drugs_clean.txt
+*.smi
+
+.idea/
+.vscode/
+.DS_Store
