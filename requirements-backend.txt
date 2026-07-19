@@ -1,0 +1,17 @@
+# Backend deployment: converters + ONNX encoders. No torch, no transformers.
+#
+# Resident footprint ~350 MB against ~1 GB for the torch stack, which is what
+# makes a 512 MB free instance viable. Nothing here depends on huggingface-hub,
+# so the version conflict that blocked the Gradio Space cannot recur.
+
+fastapi==0.139.2
+uvicorn[standard]==0.51.0
+pydantic==2.11.10
+
+rdkit==2026.3.4
+selfies==2.2.0
+braids-mol @ git+https://github.com/AayushK-othari/braid.git@main
+
+onnxruntime==1.23.2
+tokenizers==0.21.0
+numpy>=1.26,<3
