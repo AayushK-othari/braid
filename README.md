@@ -7,7 +7,7 @@ This repository is a **working reference implementation** plus the test suites u
 verify the claims made about it.
 
 The pretrained model, **BRAIDBERTa-v9**, lives on the HuggingFace:
-[aakothari/BRAIDBERTa-v9](https://huggingface.co/aakothari/BRAIDBERTa-v9).
+[aakothari/BRAIDBERTa](https://huggingface.co/aakothari/BRAIDBERTa-v9).
 
 ---
 
